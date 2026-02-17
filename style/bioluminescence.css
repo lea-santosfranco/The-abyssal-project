@@ -1,6 +1,8 @@
 :root {
   --flash-light: rgba(219, 231, 186, 0.4);
   --flash-light-border: rgba(219, 231, 186, 0.1);
+  --black-color: rgb(1, 0, 20);
+  --white-color: aliceblue;
 }
 
 * {
@@ -11,20 +13,31 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(1, 0, 20);
+  background-color: var(--black-color);
   overflow-x: hidden;
 }
 main {
   height: 100%;
+  padding: 0 5vw;
 }
 h1 {
-  color: aliceblue;
+  color: var(--white-color);
+  padding: 16px 0;
+  border-bottom: 2px solid var(--white-color);
 }
 .sea-display {
   position: relative;
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
   height: 100%;
+}
+.sea-display button {
+  cursor: pointer;
+  background-color: var(--white-color);
+  border: none;
+  border-radius: 0 0 4px 4px;
+  font-size: 1.25rem;
+  padding: 4px 1rem;
 }
 .hidden-content {
   position: absolute;
