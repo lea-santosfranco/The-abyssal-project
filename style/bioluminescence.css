@@ -1,0 +1,61 @@
+:root {
+  --flash-light: rgba(219, 231, 186, 0.4);
+  --flash-light-border: rgba(219, 231, 186, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(1, 0, 20);
+  overflow-x: hidden;
+}
+main {
+  height: 100%;
+}
+h1 {
+  color: aliceblue;
+}
+.sea-display {
+  position: relative;
+  width: 100vw;
+  overflow-x: hidden;
+  height: 100%;
+}
+.hidden-content {
+  position: absolute;
+  top: 0%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  border-radius: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.opacity-light {
+  opacity: 0;
+}
+.light-color {
+  background: radial-gradient(var(--flash-light), var(--flash-light-border));
+  box-shadow: 0 0 24px var(--flash-light);
+  z-index: 3;
+}
+.bio-creatures {
+  position: relative;
+  z-index: 2;
+}
+.sea-monster {
+  height: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .sea-monster {
+    height: auto;
+    width: 100%;
+  }
+}
