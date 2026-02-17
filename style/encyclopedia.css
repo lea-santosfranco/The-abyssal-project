@@ -1,7 +1,18 @@
+body{
+    background: linear-gradient(180deg, #1a2a4d 0%,#05080f 100%);
+    color: #e0e0e0;
+
+}
+h2{
+    text-align: center;
+    color: #4076b0;
+    text-shadow: 0 0 10px rgba(77, 161, 255, 0.5);
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
 .imgEncyclopedia{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    background-color: #000;
     border-radius: 10px;
 
 }
