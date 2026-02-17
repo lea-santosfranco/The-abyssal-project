@@ -1,0 +1,10 @@
+.imgEncyclopedia{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: #000;
+    border-radius: 10px;
+
+}
+img{
+    width: 100%;
+}
