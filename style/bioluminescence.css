@@ -37,24 +37,15 @@ h1 {
   position: relative;
   z-index: 4;
 }
-.hidden-content {
+#hidden-content {
   position: absolute;
   top: 0%;
   width: 90vw;
   height: 90vh;
   border-radius: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .opacity-light {
   opacity: 0;
-}
-.light-color {
-  background: radial-gradient(var(--flash-light), var(--flash-light-border));
-  box-shadow: 0 0 24px var(--flash-light);
-  z-index: 3;
 }
 .bio-creatures {
   position: relative;
@@ -84,6 +75,26 @@ h1 {
   height: 5%;
   top: 40%;
   right: 25%;
+}
+.spotlight-color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background: radial-gradient(var(--flash-light), var(--flash-light-border));
+  box-shadow: 0 0 24px var(--flash-light);
+  z-index: 3;
+}
+.sea-monster-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .sea-monster {
   height: 100%;

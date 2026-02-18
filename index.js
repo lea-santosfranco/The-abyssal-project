@@ -1,11 +1,11 @@
 // Toggle light in Bioluminescence page
-const spotlight = document.querySelectorAll(".hidden-content");
+const spotlight = document.getElementById("hidden-content");
 function toggleLight() {
-  spotlight.forEach((i) => i.classList.toggle("opacity-light"));
+  spotlight.classList.toggle("opacity-light");
 }
 
-// Bioluminescence creatures animation
-// weird creature animation
+// Bioluminescence creatures animations :
+// -> weird creature animation
 document
   .getElementById("weird-creature")
   .animate(
@@ -19,7 +19,7 @@ document
       iterations: Infinity,
     },
   );
-// medusa animation
+// -> medusa animation
 document
   .getElementById("aequorea")
   .animate(
@@ -34,7 +34,7 @@ document
       iterations: Infinity,
     },
   );
-// octopus animation
+// -> octopus animation
 document
   .getElementById("glass-octopus")
   .animate(
@@ -49,7 +49,7 @@ document
       iterations: Infinity,
     },
   );
-// siphonophore animation
+// -> siphonophore animation
 document
   .getElementById("siphonophore")
   .animate(

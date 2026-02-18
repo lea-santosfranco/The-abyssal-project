@@ -11,7 +11,6 @@
       <h1>Bioluminescence</h1>
       <section class="sea-display">
         <button onclick="toggleLight()">Spotlight</button>
-        <div class="hidden-content light-color opacity-light"></div>
         <div class="bio-creatures">
           <img
             id="weird-creature"
@@ -34,12 +33,15 @@
             alt="Siphonophore frillagalma vityazi"
           />
         </div>
-        <div class="hidden-content opacity-light">
-          <img
-            class="sea-monster"
-            src="../assets/ElGranMaja.png"
-            alt="Photo of Gran Maja"
-          />
+        <div id="hidden-content" class="opacity-light">
+          <div class="spotlight-color"></div>
+          <div class="sea-monster-container">
+            <img
+              class="sea-monster"
+              src="../assets/ElGranMaja.png"
+              alt="Photo of Gran Maja"
+            />
+          </div>
         </div>
       </section>
     </main>
