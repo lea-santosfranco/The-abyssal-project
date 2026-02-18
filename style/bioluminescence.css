@@ -12,12 +12,10 @@
 }
 body {
   width: 100vw;
-  height: 100vh;
   background-color: var(--black-color);
   overflow-x: hidden;
 }
 main {
-  height: 100%;
   padding: 0 5vw;
 }
 h1 {
@@ -28,8 +26,6 @@ h1 {
 .sea-display {
   position: relative;
   width: 100%;
-  overflow-x: hidden;
-  height: 100%;
 }
 .sea-display button {
   cursor: pointer;
@@ -38,13 +34,14 @@ h1 {
   border-radius: 0 0 4px 4px;
   font-size: 1.25rem;
   padding: 4px 1rem;
+  position: relative;
+  z-index: 4;
 }
 .hidden-content {
   position: absolute;
   top: 0%;
-  left: 5%;
-  width: 90%;
-  height: 90%;
+  width: 90vw;
+  height: 90vh;
   border-radius: 100%;
   overflow: hidden;
   display: flex;
@@ -61,7 +58,32 @@ h1 {
 }
 .bio-creatures {
   position: relative;
+  height: 90vh;
   z-index: 2;
+  padding: 5vh 0;
+}
+.bio-creatures img {
+  position: absolute;
+}
+#weird-creature {
+  height: 10%;
+  top: 10%;
+  left: 5%;
+}
+#aequorea {
+  height: 15%;
+  top: 15%;
+  right: 5%;
+}
+#glass-octopus {
+  height: 30%;
+  bottom: 10%;
+  left: 35%;
+}
+#siphonophore {
+  height: 5%;
+  top: 40%;
+  right: 25%;
 }
 .sea-monster {
   height: 100%;
