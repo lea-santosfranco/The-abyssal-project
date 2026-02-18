@@ -64,3 +64,38 @@ document
       iterations: Infinity,
     },
   );
+
+// Particles on Bioluminescence page
+function createParticle() {
+  // create particle
+  const particle = document.createElement("div");
+  particle.className = "particle";
+  // random size at creation
+  let pSize = Math.ceil(Math.random() * 3) + "px";
+  particle.style.width = pSize;
+  particle.style.height = pSize;
+  // random position
+  particle.style.top = Math.random() * 100 + "vh";
+  particle.style.left = Math.random() * 100 + "vw";
+  // particle direct child of body
+  document.body.appendChild(particle);
+  // particle animation
+  let pDuration = Math.random() * 5000 + 7000;
+  let pDirection = Math.random() > 0.5 ? "+" : "-";
+  const pAnimaton = particle.animate(
+    [
+      { transform: "translateX(0)", opacity: 0 },
+      { transform: `translateX(${pDirection}20px)`, opacity: 0.75 },
+      { transform: `translateX(${pDirection}40px)`, opacity: 0 },
+    ],
+    {
+      duration: pDuration,
+    },
+  );
+  // remove particle once animation finish
+  pAnimaton.onfinish = () => particle.remove();
+}
+// Loop particle creation
+document.addEventListener("DOMContentLoaded", () => {
+  setInterval(createParticle, 200);
+});
