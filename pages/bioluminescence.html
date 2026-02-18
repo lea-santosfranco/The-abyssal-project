@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bioluminiscence</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/bioluminescence.css" />
+    <title>Bioluminescence</title>
+  </head>
+  <body>
     <header>
         <div>
             <nav >
@@ -19,5 +19,44 @@
             </nav>
         </div>
     </header>
-</body>
+    <main>
+      <h1>Bioluminescence</h1>
+      <section class="sea-display">
+        <button onclick="toggleLight()">Spotlight</button>
+        <div class="bio-creatures">
+          <img
+            id="weird-creature"
+            src="../assets/weird-creature.png"
+            alt="Very weird thing"
+          />
+          <img
+            id="aequorea"
+            src="../assets/Aequorea-forskalea.png"
+            alt="Aequorea forskalea"
+          />
+          <img
+            id="glass-octopus"
+            src="../assets/Glass-Octopus.png"
+            alt="Glass octopus"
+          />
+          <img
+            id="siphonophore"
+            src="../assets/siphonophore.png"
+            alt="Siphonophore frillagalma vityazi"
+          />
+        </div>
+        <div id="hidden-content" class="opacity-light">
+          <div class="spotlight-color"></div>
+          <div class="sea-monster-container">
+            <img
+              class="sea-monster"
+              src="../assets/ElGranMaja.png"
+              alt="Photo of Gran Maja"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="../index.js"></script>
 </html>
