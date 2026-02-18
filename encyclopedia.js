@@ -35,3 +35,29 @@ function createBubble() {
 document.addEventListener('DOMContentLoaded', () => {
     setInterval(createBubble, 300);
 });
+
+const buttons = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('.fish-card');
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        // On retire la classe active de tous les boutons
+        buttons.forEach(btn => btn.classList.remove('active'));
+        // On ajoute la classe active au bouton cliqué
+        button.classList.add('active');
+        
+        const filter = button.classList[1]; // Récupère la classe de filtre (epipelagic, mesopelagic, etc.)
+
+        cards.forEach(card => {
+            if (filter === 'all') {
+                card.style.display = 'block';
+            } else {
+                if (card.classList.contains(filter)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        });
+    });
+});
