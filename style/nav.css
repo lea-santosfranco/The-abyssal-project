@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+.desktop-nav {
+  display: none;
+}
+/* --Mobile NavBar-- */
+.mobile-nav {
+  position: relative;
+  height: 88px;
+}
+.menu-btn {
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  top: 12px;
+  right: 5vw;
+  width: 64px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: none;
+  border-radius: 8px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 20px 10px rgba(255, 255, 255, 0.75);
+}
+#mobile-menu {
+  position: absolute;
+  right: 0;
+  z-index: 9;
+  padding: 88px 0 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+.menu-width {
+  width: 100%;
+}
+.menu-nowidth {
+  width: 0;
+}
+#mobile-menu li {
+  width: 100%;
+  text-align: end;
+  padding: 0 5vw;
+}
+/* --Mobile NavBar-- */
+.desktop-nav ul {
+  justify-content: space-around;
+  padding: 0.5rem 0;
+}
+/* --General Style-- */
+header ul {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: inset 0 0 16px rgba(255, 255, 255, 0.75);
+  display: flex;
+  list-style: none;
+}
+header a {
+  color: #081e28;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+header a:hover {
+  opacity: 0.75;
+}
+.text-light a {
+  color: aliceblue; /*Couleurs de texte blanc sur les pages où le fond est foncé*/
+}
+/* ---MEDIA QUERRIES--- */
+@media screen and (min-width: 1024px) {
+  .mobile-nav {
+    display: none;
+  }
+  .desktop-nav {
+    display: block;
+  }
+}

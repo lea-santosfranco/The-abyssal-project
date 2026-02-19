@@ -1,17 +1,20 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-nav ul{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    list-style: none;
+body {
+  background-color: #a3c4e0;
 }
-#homepageContent img{
-    color: white;
+/* nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+} */
+#homepageContent img {
+  color: white;
 }
 
 #homepageContent{
@@ -25,23 +28,37 @@ nav ul{
     margin-top: 25%;
     /* background-image: linear-gradient(to bottom, #a3c4e0, #87aec7, #6b99af, #518496, #366f7e, #29616f, #1b5360, #0c4651, #0b3b47, #0b313d, #0a2732, #081e28); */
 }
-#homepageContent p{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    padding: 10px;
-    text-align: center;
+#homepageContent p {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  text-align: center;
 }
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-image: linear-gradient(to bottom, #a3c4e0, #87aec7, #6b99af, #518496, #366f7e, #29616f, #1b5360, #0c4651, #0b3b47, #0b313d, #0a2732, #081e28);
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(
+    to bottom,
+    #a3c4e0,
+    #87aec7,
+    #6b99af,
+    #518496,
+    #366f7e,
+    #29616f,
+    #1b5360,
+    #0c4651,
+    #0b3b47,
+    #0b313d,
+    #0a2732,
+    #081e28
+  );
 }
-section{
-    height: 1080px;
-    color: rgba(255, 255, 255, 0.496);
-    width: 80%;
+section {
+  height: 1080px;
+  color: rgba(255, 255, 255, 0.496);
+  width: 80%;
 }
 .startingPoint{
     display: flex;
@@ -58,7 +75,6 @@ section{
 }
 /* Test gemini */
 
-
 /* Le texte du pourcentage */
 #progress-text {
   color: rgb(160, 19, 19);
@@ -68,9 +84,9 @@ section{
 }
 /* fin test gemini */
 
-main section{
-    text-align: center;
-    font-size: 25px;
+main section {
+  text-align: center;
+  font-size: 25px;
 }
 
 .bubble{
@@ -80,4 +96,24 @@ main section{
     box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.3); /*inset permet de placer l'ombre à l'intérieur de la bulle*/
     pointer-events: none; /* la bulle ne peut pas bloquer un clic/une action */
     z-index: 10; /*elles passent devant le fond mais derrière le texte*/
+}
+
+/* Cache le vrai curseur sur tout le site */
+body {
+    cursor: none;
+}
+
+/* Style de la bulle */
+.cursor-bubble {
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    position: fixed; /* Fixé par rapport à l'écran */
+    pointer-events: none; /* Important : pour pouvoir cliquer "à travers" la bulle */
+    z-index: 9999;
+    transform: translate(-50%, -50%); /* Centre la bulle sur la pointe de la souris */
+    transition: width 0.2s, height 0.2s, background 0.2s; /* Pour les effets au clic */
+    box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.3);
 }
