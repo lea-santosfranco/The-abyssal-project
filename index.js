@@ -107,3 +107,28 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //------------ Fin Bubule
+
+const bubble = document.querySelector('.cursor-bubble');
+
+document.addEventListener('mousemove', (e) => {
+    // Récupère les coordonnées X et Y de la souris
+    const x = e.clientX;
+    const y = e.clientY;
+
+    // Déplace la bulle
+    bubble.style.left = x + 'px';
+    bubble.style.top = y + 'px';
+});
+
+// la bulle rétrécit quand on clique
+document.addEventListener('mousedown', () => {
+    bubble.style.width = '15px';
+    bubble.style.height = '15px';
+    bubble.style.background = 'rgba(255, 255, 255, 0.5)';
+});
+
+document.addEventListener('mouseup', () => {
+    bubble.style.width = '20px';
+    bubble.style.height = '20px';
+    bubble.style.background = 'rgba(255, 255, 255, 0.2)';
+});

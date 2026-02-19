@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+body{
+    cursor: none;
+}
 /* Style pour le menu de navigation */
 nav ul{
     display: flex;
@@ -57,7 +60,7 @@ main{
     border-radius: 50px;
     background-color: #0eadd433;
     color: white;
-    cursor: pointer;
+    cursor: none;
 }
 #quizzSection h2{
     color: white;
@@ -69,4 +72,23 @@ main{
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+
+
+/* Cache le vrai curseur sur tout le site */
+
+/* Style de la bulle */
+.cursor-bubble {
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    position: fixed; /* Fixé par rapport à l'écran */
+    pointer-events: none; /* Important : pour pouvoir cliquer "à travers" la bulle */
+    z-index: 9999;
+    transform: translate(-50%, -50%); /* Centre la bulle sur la pointe de la souris */
+    transition: width 0.2s, height 0.2s, background 0.2s; /* Pour les effets au clic */
+    box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.3);
 }
