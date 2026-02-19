@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quizz</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style/quizz.css">
 </head>
 <body>
     <header>
         <div>
-            <nav >
+            <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="bioluminescence.html">Galery</a></li>
@@ -19,5 +19,18 @@
             </nav>
         </div>
     </header>
+    <main>
+        <section id="quizzSection">
+            <div id = "question-section"> <!-- div qui englobe le quizz-->
+                <h2 id = "question-title"></h2>
+                <button onclick="nextQuestion(0)" id="first-answer"></button>
+                <button onclick="nextQuestion(1)" id="second-answer"></button>
+                <button onclick="nextQuestion(2)" id="third-answer"></button>
+                <button onclick="nextQuestion(3)" id="fourth-answer"></button>
+            </div>
+        </section>
+
+    </main>
+<script src="../quizz.js"></script>
 </body>
 </html>
