@@ -8,12 +8,31 @@ En CSS, le navigateur connaît les mots clés (background, color etc...) et si i
 En ajoutant -- devant c'est comme si tu lui dis : c'est une propriété que je personnalise. Stocke cette valeur.
 On utilise var() pour réutiliser la valeur. */
 
+/* Cache le vrai curseur sur tout le site */
+
+/* Style de la bulle */
+.cursor-bubble {
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    position: fixed; /* Fixé par rapport à l'écran */
+    pointer-events: none; /* Important : pour pouvoir cliquer "à travers" la bulle */
+    z-index: 9999;
+    transform: translate(-50%, -50%); /* Centre la bulle sur la pointe de la souris */
+    transition: width 0.2s, height 0.2s, background 0.2s; /* Pour les effets au clic */
+    box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.3);
+}
+
+
 body{
     margin: 0;
     padding: 0;
     background: linear-gradient(180deg, #0f172a 0%, #070b14 30%, #020408 70%, #000000 100% );
     background-attachment: fixed;
     color: var(--text-color);
+    cursor: none;
 }
 /* margin et padding 0 pour remettre tout à 0 et que notre background touche bien les bords */
 /* linear gradient = dégradé , 180deg pour que le dégradé aille du haut vers le bas, 0% = tout en haut, 100% = tout en bas */
@@ -95,7 +114,6 @@ gap : espacement entre chaque "case" */
     width: 100%;
     aspect-ratio: 1/1; /*force le bloc à être un carré parfait*/
     overflow: hidden; /*tout ce qui dépasse de ce bloc sera caché, c'est pour que les infos ne dépassent pas du carré*/
-    cursor: pointer;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.4s ease;
     background: rgba(0, 0, 0, 0.04);
@@ -173,8 +191,8 @@ gap : espacement entre chaque "case" */
     color: var(--text-color);
     padding: 8px 20px;
     border-radius: 20px;
-    cursor: pointer;
     transition: 0.3s ease;
+    cursor: none;
 }
 .filter-btn.active, .filter-btn:hover{
     background: var(--gold-accent);

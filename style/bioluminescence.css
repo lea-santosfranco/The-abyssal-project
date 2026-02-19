@@ -13,6 +13,7 @@ body {
   width: 100vw;
   background-color: var(--black-color);
   overflow-x: hidden;
+  cursor: none;
 }
 .particle {
   position: fixed;
@@ -35,7 +36,7 @@ h1 {
   width: 100%;
 }
 .sea-display button {
-  cursor: pointer;
+  cursor: none;
   background-color: var(--white-color);
   border: none;
   border-radius: 0 0 4px 4px;
@@ -111,4 +112,19 @@ h1 {
     height: auto;
     width: 100%;
   }
+}
+
+/* Style de la bulle */
+.cursor-bubble {
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    position: fixed; /* Fixé par rapport à l'écran */
+    pointer-events: none; /* Important : pour pouvoir cliquer "à travers" la bulle */
+    z-index: 9999;
+    transform: translate(-50%, -50%); /* Centre la bulle sur la pointe de la souris */
+    transition: width 0.2s, height 0.2s, background 0.2s; /* Pour les effets au clic */
+    box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.3);
 }
