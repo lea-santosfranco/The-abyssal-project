@@ -1,6 +1,6 @@
-:root { 
-    --text-color: #d1d9e6;
-    --gold-accent: #c5a47e;
+:root {
+  --text-color: #d1d9e6;
+  --gold-accent: #c5a47e;
 }
 /* root permet de cibler la racine de l'arbre représentant le document, ici le <html> donc on dit d'appliquer toutes ces règles à tout le site*/
 /* Les 2 -- = custom properties
@@ -39,72 +39,72 @@ body{
 /* var() = on utilise la custom properties qu'on a fait avant */
 /* background attachement fixed :  le dégradé me bouge pas pendant qu'on scroll c'est nous qui descendons. */
 
-header{
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.encyclopedia-header {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 /* vh = Viewport Height = hauteur de la fenêtre */
 /* align items center = centre verticalement (ici au milieu de la hauteur des 60vh)
 justify content center = centre horizontalement */
 /* text align center : centre le texte sur lui même */
 
-.mainContainer{
-    max-width: 800px;
-    padding: 20px;
+.mainContainer {
+  max-width: 800px;
+  padding: 20px;
 }
 /* max width = on limite la largeur à 800px
 padding de 20px pour pas que ça colle au bord de l'écran */
 
-.mainContainer h2{
-    font-size: 2.5rem;
-    font-weight: lighter;
-    letter-spacing: 6px;
-    text-transform: uppercase;
-    color: #fff;
+.mainContainer h2 {
+  font-size: 2.5rem;
+  font-weight: lighter;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #fff;
 }
-.layersInfo{
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
+.layersInfo {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
 }
 /* max width = on limite la largeur à 900px
 margin 0 auto = pas de marge et auto calcule automatiquement l'espace vide à gauche et à droite et le divise équitablement donc ça centre parfaitement */
-.layersBlock{
-    background: rgba(255, 255, 255, 0.02);
-    border-left: 1px solid var(--gold-accent);
-    padding: 40px;
-    margin-bottom: 60px;
-    backdrop-filter: blur(5px);
-    transition: 0.5s ease;
+.layersBlock {
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 1px solid var(--gold-accent);
+  padding: 40px;
+  margin-bottom: 60px;
+  backdrop-filter: blur(5px);
+  transition: 0.5s ease;
 }
 /* background = blanc et opacité de 2%
 backdrop filter blur : tout ce qui est derrière ce bloc doit devenir flou 
 transition : si un changement de style arrive il doit prendre 0.5 sec et être fluide */
 
-.layersBlock:hover{
-    background: rgba(255, 255, 255, 0.05);
-    transform: translateX(10px);
+.layersBlock:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(10px);
 }
 /* hover = le style s'applique uniquement si la souris de l'utilisateur se trouve au dessus de l'élément
 transform : on demande à l'élément de se déplacer de 10px sur l'axe X (horizontal) */
 
-.layersBlock h4{
-    color: var(--gold-accent);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-top: 0;
+.layersBlock h4 {
+  color: var(--gold-accent);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 0;
 }
 
-.imgEncyclopedia{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
-    max-width: 1100px;
-    margin: 100px auto;
-    padding: 40px;
+.imgEncyclopedia {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  max-width: 1100px;
+  margin: 100px auto;
+  padding: 40px;
 }
 /* grid template : me créer 5 colonnes, sépare l'espace en fraction égales et une colonne = une fraction 
 gap : espacement entre chaque "case" */

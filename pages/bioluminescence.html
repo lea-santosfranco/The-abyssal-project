@@ -4,13 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style/bioluminescence.css" />
+    <link rel="stylesheet" href="../style/nav.css" />
     <title>Bioluminescence</title>
   </head>
   <body>
     <div class="cursor-bubble"></div>
     <header>
-      <div>
-        <nav>
+      <div class="text-light">
+        <nav class="mobile-nav">
+          <button onclick="toggleMenu()" class="menu-btn"></button>
+          <ul id="mobile-menu" class="menu-nowidth">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="bioluminescence.html">Galery</a></li>
+            <li><a href="encyclopedia.html">Encyclopedia</a></li>
+            <li><a href="quizz.html">Quizz/Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="desktop-nav">
           <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="bioluminescence.html">Galery</a></li>
@@ -59,5 +69,13 @@
       </section>
     </main>
   </body>
+  <script>
+    // Burger menu
+    const mobileMenu = document.getElementById("mobile-menu");
+    function toggleMenu() {
+      mobileMenu.classList.toggle("menu-width");
+      mobileMenu.classList.toggle("menu-nowidth");
+    }
+  </script>
   <script src="../bioluminescence.js"></script>
 </html>

@@ -1,24 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quizz</title>
     <link rel="stylesheet" href="../style/quizz.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../style/nav.css" />
+  </head>
+  <body>
     <div class="cursor-bubble"></div>
     <header>
-        <div>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="bioluminescence.html">Galery</a></li>
-                    <li><a href="encyclopedia.html">Encyclopedia</a></li>
-                    <li><a href="quizz.html">Quizz/Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div>
+        <nav class="mobile-nav">
+          <button onclick="toggleMenu()" class="menu-btn"></button>
+          <ul id="mobile-menu" class="menu-nowidth">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="bioluminescence.html">Galery</a></li>
+            <li><a href="encyclopedia.html">Encyclopedia</a></li>
+            <li><a href="quizz.html">Quizz/Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="bioluminescence.html">Galery</a></li>
+            <li><a href="encyclopedia.html">Encyclopedia</a></li>
+            <li><a href="quizz.html">Quizz/Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
         <section id="quizzSection">
@@ -32,6 +42,14 @@
         </section>
 
     </main>
-<script src="../quizz.js"></script>
-</body>
+    <script src="../quizz.js"></script>
+  </body>
+  <script>
+    // Burger menu
+    const mobileMenu = document.getElementById("mobile-menu");
+    function toggleMenu() {
+      mobileMenu.classList.toggle("menu-width");
+      mobileMenu.classList.toggle("menu-nowidth");
+    }
+  </script>
 </html>
