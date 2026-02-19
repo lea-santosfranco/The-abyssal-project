@@ -4,60 +4,35 @@ window.onscroll = function () {
 };
 
 function depthProgressBar() {
-  const depthIndicator = document.getElementById("depthCounter");
-  let scubaDiverImg = document.createElement("img");
-  scubaDiverImg.src = "ima";
+//   const depthIndicator = document.getElementById("depthCounter");
+//   const depthPerZone = document.getElementsByClassName("depthZones");
+  
   // Calcul de la distance parcourue par l'utilisateur
-  const winScroll =
-    document.body.scrollTop || document.documentElement.scrollTop;
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
 
   // Calcul de la hauteur totale scrollable (Hauteur totale - Hauteur de la fenêtre)
-  const height =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
   // Calcul du pourcentage
   const scrolled = (winScroll / height) * 100;
 
-  // Mise à jour de la largeur de la barre et du texte
-  const progressText = document.getElementById("progress-text");
-  progressText.innerText = Math.round(scrolled) + "%";
-  const depthText = document.getElementById("depthCounter");
-  depthText.innerText = `${Math.round(scrolled)}m under the sea`;
-  // while (Math.round(scrolled)>20){
-  //     depthIndicator.style.display = 'block';
-  // }
+  // Mise à jour du texte
+//   const depthText = document.getElementById("depthCounter");
+//   depthText.innerText = `- ${Math.round(scrolled)}m`;
+//   depthPerZone.innerText = `Blablabla`;
+    const positionFirstZone = document.getElementById('firstZone');
+    positionFirstZone.innerText = `EPIPELAGIC - ${Math.round(scrolled)}m`;
+    const positionSecondZone = document.getElementById('secondZone');
+    positionSecondZone.innerText = `MESOPELAGIC - ${Math.round(scrolled)*10}m`;
+    const positionThirdZone = document.getElementById('thirdZone');
+    positionThirdZone.innerText = `BATHYPELAGIC - ${Math.round(scrolled)*20}m`;
+    const positionFourthZone = document.getElementById('fourthZone');
+    positionFourthZone.innerText = `ABYSSOPELAGIC - ${Math.round(scrolled)*60}m`;
+    const positionFifthZone = document.getElementById('fifthZone');
+    positionFifthZone.innerText = `HADALPELAGIC - ${Math.round(scrolled)*67}m`;
 }
 
-// Obtention de la position:
-// const positionFirstZone = document.getElementById('firstZone');
-// const firstRect = positionFirstZone.getBoundingClientRect();
-// const yFirstZone = firstRect.top + window.scrollY;
-// console.log(" Y = " + yFirstZone)
-
-// const positionSecondZone = document.getElementById('secondZone');
-// const secondRect = positionSecondZone.getBoundingClientRect();
-// const ySecondZone = secondRect.top + window.scrollY;
-// console.log(" Y = " + ySecondZone)
-
-// const positionThirdZone = document.getElementById('thirdZone');
-// const thirdRect = positionThirdZone.getBoundingClientRect();
-// const yThirdZone = thirdRect.top + window.scrollY;
-// console.log(" Y = " + yThirdZone)
-
-// const positionFourthZone = document.getElementById('fourthZone');
-// const fourthRect = positionFourthZone.getBoundingClientRect();
-// const yFourthZone = fourthRect.top + window.scrollY;
-// console.log(" Y = " + yFourthZone)
-
-const positionFifthZone = document.getElementById("fifthZone");
-const fifthRect = positionFifthZone.getBoundingClientRect();
-const yFifthZone = fifthRect.top + window.scrollY;
-console.log(" Y = " + yFifthZone);
-const yFifthZoneBottom = fifthRect.bottom + window.scrollY;
-console.log(" Y = " + yFifthZoneBottom);
-
-//----------------------- Début Bubule
+//----------------------- Début Bubule ---------------------------------------------------------------
 function createBubble() {
   const bubble = document.createElement("div");
 
