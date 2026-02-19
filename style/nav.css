@@ -1,10 +1,13 @@
+* {
+  box-sizing: border-box;
+}
 .desktop-nav {
   display: none;
 }
 /* --Mobile NavBar-- */
 .mobile-nav {
   position: relative;
-  height: 0;
+  height: 88px;
 }
 .menu-btn {
   cursor: pointer;
@@ -68,6 +71,9 @@ header a {
 }
 header a:hover {
   opacity: 0.75;
+}
+.text-light a {
+  color: aliceblue; /*Couleurs de texte blanc sur les pages où le fond est foncé*/
 }
 /* ---MEDIA QUERRIES--- */
 @media screen and (min-width: 1024px) {
