@@ -4,7 +4,7 @@ window.onscroll = function () {
 };
 
 function depthProgressBar() {
-  const depthIndicator = document.getElementById("depthCounter");
+//   const depthIndicator = document.getElementById("depthCounter");
 //   const depthPerZone = document.getElementsByClassName("depthZones");
   
   // Calcul de la distance parcourue par l'utilisateur
@@ -17,10 +17,19 @@ function depthProgressBar() {
   const scrolled = (winScroll / height) * 100;
 
   // Mise à jour du texte
-  const depthText = document.getElementById("depthCounter");
-  depthText.innerText = `${Math.round(scrolled)}m under the sea`;
+//   const depthText = document.getElementById("depthCounter");
+//   depthText.innerText = `- ${Math.round(scrolled)}m`;
 //   depthPerZone.innerText = `Blablabla`;
-
+    const positionFirstZone = document.getElementById('firstZone');
+    positionFirstZone.innerText = `EPIPELAGIC - ${Math.round(scrolled)}m`;
+    const positionSecondZone = document.getElementById('secondZone');
+    positionSecondZone.innerText = `MESOPELAGIC - ${Math.round(scrolled)*10}m`;
+    const positionThirdZone = document.getElementById('thirdZone');
+    positionThirdZone.innerText = `BATHYPELAGIC - ${Math.round(scrolled)*20}m`;
+    const positionFourthZone = document.getElementById('fourthZone');
+    positionFourthZone.innerText = `ABYSSOPELAGIC - ${Math.round(scrolled)*60}m`;
+    const positionFifthZone = document.getElementById('fifthZone');
+    positionFifthZone.innerText = `HADALPELAGIC - ${Math.round(scrolled)*67}m`;
 }
 
 //----------------------- Début Bubule ---------------------------------------------------------------

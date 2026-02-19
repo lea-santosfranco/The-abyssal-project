@@ -13,6 +13,7 @@ nav ul{
 #homepageContent img{
     color: white;
 }
+
 #homepageContent{
     /* background-color: #7aabb8; */
     display: flex;
@@ -42,10 +43,14 @@ section{
     color: rgba(255, 255, 255, 0.496);
     width: 80%;
 }
+.startingPoint{
+    display: flex;
+    /* align-items: flex-start; */
+}
 #depthCounter{
     position: fixed;
-    top: 50%;
-    right: 50%;
+    top: 98%;
+    right: 5%;
     font-size: 20px;
     color: white;
     opacity: 0.5;
