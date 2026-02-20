@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quizz</title>
-    <link rel="stylesheet" href="../style/quizz.css">
+    <link rel="stylesheet" href="../style/quizz.css" />
     <link rel="stylesheet" href="../style/nav.css" />
   </head>
   <body>
@@ -15,32 +15,32 @@
           <button onclick="toggleMenu()" class="menu-btn"></button>
           <ul id="mobile-menu" class="menu-nowidth">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="bioluminescence.html">Galery</a></li>
+            <li><a href="bioluminescence.html">Bioluminescence</a></li>
             <li><a href="encyclopedia.html">Encyclopedia</a></li>
-            <li><a href="quizz.html">Quizz/Contact</a></li>
+            <li><a href="quizz.html">Quizz</a></li>
           </ul>
         </nav>
         <nav class="desktop-nav">
           <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="bioluminescence.html">Galery</a></li>
+            <li><a href="bioluminescence.html">Bioluminescence</a></li>
             <li><a href="encyclopedia.html">Encyclopedia</a></li>
-            <li><a href="quizz.html">Quizz/Contact</a></li>
+            <li><a href="quizz.html">Quizz</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
-        <section id="quizzSection">
-            <div id = "question-section"> <!-- div qui englobe le quizz-->
-                <h2 id = "question-title"></h2>
-                <button onclick="nextQuestion(0)" id="first-answer"></button>
-                <button onclick="nextQuestion(1)" id="second-answer"></button>
-                <button onclick="nextQuestion(2)" id="third-answer"></button>
-                <button onclick="nextQuestion(3)" id="fourth-answer"></button>
-            </div>
-        </section>
-
+      <section id="quizzSection">
+        <div id="question-section">
+          <!-- div qui englobe le quizz-->
+          <h2 id="question-title"></h2>
+          <button onclick="nextQuestion(0)" id="first-answer"></button>
+          <button onclick="nextQuestion(1)" id="second-answer"></button>
+          <button onclick="nextQuestion(2)" id="third-answer"></button>
+          <button onclick="nextQuestion(3)" id="fourth-answer"></button>
+        </div>
+      </section>
     </main>
     <script src="../quizz.js"></script>
   </body>
