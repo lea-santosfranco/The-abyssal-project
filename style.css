@@ -2,6 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+
 }
 body {
   background-color: #a3c4e0;
@@ -56,7 +58,7 @@ main {
   );
 }
 section {
-  height: 1080px;
+  height: 100vh;
   color: rgba(255, 255, 255, 0.496);
   width: 80%;
 }
@@ -116,4 +118,14 @@ body {
     transform: translate(-50%, -50%); /* Centre la bulle sur la pointe de la souris */
     transition: width 0.2s, height 0.2s, background 0.2s; /* Pour les effets au clic */
     box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.3);
+}
+
+.backToTheSurface {
+
+}
+.backToTheSurface img {
+  width: 50px;
+  height: 50px;
+  transform: rotate(180deg);
+  opacity: 0.5;
 }
